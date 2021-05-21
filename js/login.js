@@ -15,6 +15,7 @@ const app = Vue.createApp({
     async checkLogin() {
       try {
         const { data } = await req.post('/api/user/check');
+        console.log(data);
         if (data.success) {
           alert(data.message);
           setTimeout(() => {
