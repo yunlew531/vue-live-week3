@@ -27,7 +27,7 @@ const app = Vue.createApp({
           this.messageModal.show();
           this.messageText = data.message;
           setTimeout(() => {
-            window.location.href = '../index.html';
+            window.location.href = '../vue-live-week3/index.html';
           }, 3000);
         }
       }
@@ -110,7 +110,7 @@ const app = Vue.createApp({
         if (data.success) {
           document.cookie = `Hegoze=;expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
           setTimeout(() => {
-            window.location.href = '../index.html';
+            window.location.href = '../vue-live-week3/index.html';
           }, 3000);
         }
       }
