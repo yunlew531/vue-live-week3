@@ -1,5 +1,6 @@
 const req = axios.create({
   baseURL: 'https://vue3-course-api.hexschool.io',
+  headers: { common: {} },
 });
 const app = Vue.createApp({
   data() {
