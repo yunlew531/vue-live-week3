@@ -17,7 +17,7 @@ const app = Vue.createApp({
       try {
         const { data } = await req.post('/api/user/check');
         if (data.success) {
-          alert(data.message);
+          alert('已登入!跳轉中');
           setTimeout(() => {
             window.location.href = './manage.html';
           }, 3000);
