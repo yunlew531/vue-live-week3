@@ -15,11 +15,10 @@ const app = Vue.createApp({
     async checkLogin() {
       try {
         const { data } = await req.post('/api/user/check');
-        console.log(data);
         if (data.success) {
           alert(data.message);
           setTimeout(() => {
-            window.location.href = '../vue-live-week3/manage.html';
+            window.location.href = './manage.html';
           }, 3000);
         }
       }
@@ -51,6 +50,8 @@ const app = Vue.createApp({
     },
   },
   created() {
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)Hegoze\s*=\s*([^;]*).*$)|^.*$/, '$1');
+    req.defaults.headers.common['Authorization'] = token;
     this.checkLogin();
   },
 }).mount('#app');
