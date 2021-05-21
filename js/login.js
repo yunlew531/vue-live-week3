@@ -12,6 +12,20 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    async checkLogin() {
+      try {
+        const { data } = await req.post('/api/user/check');
+        if (data.success) {
+          alert(data.message);
+          setTimeout(() => {
+            window.location.href = '../vue-live-week3/manage.html';
+          }, 3000);
+        }
+      }
+      catch(err) {
+        console.dir(err);
+      }
+    },
     async login() {
       this.isValidate = true;
       const user = {
@@ -34,5 +48,8 @@ const app = Vue.createApp({
         console.dir(err);
       }
     },
+  },
+  created() {
+    this.checkLogin();
   },
 }).mount('#app');
