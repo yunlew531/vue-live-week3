@@ -63,7 +63,6 @@ const app = Vue.createApp({
         if (data.success) {
           this.delProductModal.hide();
           this.getProducts();
-        } else {
         }
       }
       catch(err) {
@@ -94,7 +93,6 @@ const app = Vue.createApp({
         if (data.success) {
           this.productModal.hide();
           this.resetModal();
-        } else {
         }
       }
       catch(err) {
