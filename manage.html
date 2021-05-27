@@ -81,7 +81,7 @@
                 <div class="mb-1">
                   <div class="form-group">
                     <label for="imageUrl">輸入圖片網址</label>
-                    <input type="text" class="form-control"
+                    <input type="text" class="form-control" id="imageUrl"
                            placeholder="請輸入圖片連結" v-model.trim="tempProduct.imageUrl">
                   </div>
                   <img v-if="tempProduct.imageUrl" class="img-fluid mt-1" :src="tempProduct.imageUrl" alt="失效">
@@ -112,7 +112,7 @@
                            placeholder="請輸入分類" v-model.trim="tempProduct.category">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="price">單位</label>
+                    <label for="unit">單位</label>
                     <input id="unit" type="text" class="form-control" placeholder="請輸入單位" v-model.trim="tempProduct.unit" required>
                     <p class="invalid-feedback">必填!</p>
                   </div>

@@ -75,7 +75,7 @@ const app = Vue.createApp({
     },
     resetModal() {
       this.tempProduct = {};
-      this.IsTempProductValidate = false;
+      this.isTempProductValidate = false;
       this.tempId = '';
     },
     async reqProduct() {
@@ -83,7 +83,7 @@ const app = Vue.createApp({
       `/api/${api_path}/admin/product` :
       `/api/${api_path}/admin/product/${this.tempId}`;
       const Method = this.modalAction === '新增產品' ? 'post' : 'put';
-      this.IsTempProductValidate = true;
+      this.isTempProductValidate = true;
       const { title, category, unit, origin_price, price } = this.tempProduct;
       if (!title || !category || !unit || !origin_price || !price) return;
       try {
