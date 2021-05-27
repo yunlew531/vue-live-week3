@@ -16,7 +16,7 @@
           請先登入
         </h1>
         <div class="col-8">
-          <form id="form" class="form-signin needs-validation" :class="{'was-validated': isValidate}" novalidate  @summit.prevent="login">
+          <form id="form" class="form-signin needs-validation" :class="{'was-validated': isValidate}" novalidate  @submit.prevent="login">
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="username"
               placeholder="name@example.com" autofocus required v-model="user.username">
